@@ -23,9 +23,7 @@ class BoardPage(BasePage):
     def __init__(self):
         super().__init__()
         try:
-            WebDriverWait(self.browser, 10).until(
-                ec.presence_of_element_located((By.CSS_SELECTOR, "span.icon-sm.icon-star.board-header-btn-icon"))
-            )
+            self.wait.until(ec.presence_of_element_located(self.ADD_TO_LIST_LINK))
         finally:
             print("error Load Board Page")
 

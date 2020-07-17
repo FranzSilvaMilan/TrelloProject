@@ -17,7 +17,7 @@ class WelcomePage(BasePage):
         self.browser.find_element(*self.CREATE_BOARD).click()
 
     def set_board_name(self, board_name):
-        self.wait.until(ec.visibility_of_element_located(self.INPUT_BOARD_NAME))
+        self.wait.until(ec.presence_of_element_located(self.INPUT_BOARD_NAME))
         self.browser.find_element(*self.INPUT_BOARD_NAME).send_keys(board_name)
 
     def click_create_board_button(self):

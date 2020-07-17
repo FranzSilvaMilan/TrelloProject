@@ -16,9 +16,7 @@ class TeamPage(BasePage):
     def __init__(self):
         super().__init__()
         try:
-            WebDriverWait(self.browser, 10).until(
-                ec.presence_of_element_located(self.NAME_INPUT)
-            )
+            self.wait.until(ec.visibility_of_element_located(self.NAME_INPUT))
         finally:
             print("error Team Page")
 
