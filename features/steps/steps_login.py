@@ -1,6 +1,6 @@
 from behave import given
 
-from core.trello.login_page import *
+from core.pages.login_page import LoginPage
 
 
 @given("I login with user {user} and password {password} in the Trello page")
